@@ -10,14 +10,14 @@
         ☰
     </button>
 
-    <!-- Search Bar -->
-    <input type="text" class="search-bar" placeholder="Search..." />
-
     <!-- Navigation links -->
     <ul class:open={isOpen}>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li> 
+   <!-- Profile Icon as Navigation Button -->
+        <li><a href="/profile">
+        <img src="/user.png" alt="Profile" class="profile-icon"></a></li>
     </ul>
 </nav>
 
@@ -25,7 +25,7 @@
 <style>
     /* Base Navigation Styling */
     .nav {
-        background-color: #007bff;
+        background-color: rgb(44, 25, 7);
         padding: 1rem;
         text-align: center;
     }
@@ -47,19 +47,19 @@
         color: white;
         text-decoration: none;
         font-weight: bold;
+        padding: 10px 15px; /* Add padding to make the border look better */
+        border: 2px solid white; /* White border around buttons */
+        border-radius: 5px; /* Rounded corners */
+        transition: all 0.3s ease-in-out; /* Smooth transition effect */
     }
 
-    /* Search Bar Styling */
-    .search-bar {
-        padding: 8px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 900px; /* Збільшуємо довжину */
-        max-width: 80%; /* Обмежуємо максимальну ширину */
+    /* Profile Icon Styling */
+    .profile-icon {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 2px solid white;
+        vertical-align: middle;
     }
 
     /* 🍔 Burger Menu (Hidden on Large Screens) */
@@ -94,20 +94,19 @@
             padding: 1rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
-        .search-bar {
-            width: 80%;
-            margin-top: 10px;
-            position: static;
-            transform: none;
-        }
-
+    
         .nav ul.open {
             display: flex; /* Show menu when isOpen is true */
         }
 
         .nav ul li {
             padding: 10px 20px;
+        }
+
+        /* Center the profile icon in mobile */
+        .profile-icon {
+            display: block;
+            margin: 0 auto;
         }
     }
 </style> 

@@ -7,10 +7,10 @@
     });
 </script>
 
-<img src="/SLOVO.jpeg" alt="SLOVO" class="header-image" />
+<img src="/artAd.png" alt="ART" class="header-image" />
 
-<h1>Welcome to LeArt</h1>
-<p>This is Homepage of our Website for Buying and Selling Original Artworks!</p>
+<!-- <h1>Welcome to LeArt</h1>
+<p>This is Homepage of our Website for Buying and Selling Original Artworks!</p> -->
 
 <div class="gallery">
     <Card title="Card 1" description="The first card" />
