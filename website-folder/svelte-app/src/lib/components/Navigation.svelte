@@ -10,6 +10,9 @@
         ☰
     </button>
 
+    <!-- Search Bar -->
+    <input type="text" class="search-bar" placeholder="Search..." />
+
     <!-- Navigation links -->
     <ul class:open={isOpen}>
         <li><a href="/">Home</a></li>
@@ -46,6 +49,19 @@
         font-weight: bold;
     }
 
+    /* Search Bar Styling */
+    .search-bar {
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 900px; /* Збільшуємо довжину */
+        max-width: 80%; /* Обмежуємо максимальну ширину */
+    }
+
     /* 🍔 Burger Menu (Hidden on Large Screens) */
     .burger {
         display: none;
@@ -77,6 +93,13 @@
             text-align: left;
             padding: 1rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-bar {
+            width: 80%;
+            margin-top: 10px;
+            position: static;
+            transform: none;
         }
 
         .nav ul.open {

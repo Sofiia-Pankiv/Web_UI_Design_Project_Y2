@@ -7,6 +7,8 @@
     });
 </script>
 
+<img src="/SLOVO.jpeg" alt="SLOVO" class="header-image" />
+
 <h1>Welcome to LeArt</h1>
 <p>This is Homepage of our Website for Buying and Selling Original Artworks!</p>
 
@@ -19,6 +21,13 @@
 </div>
 
 <style>
+      .header-image {
+        width: 1350px; /* Зробити картинку вужчою */
+        /* max-width: 800px; /* Обмежити максимальну ширину */
+        height: 250px;
+        display: block;
+        margin: 0 auto; /* Центрувати */
+    }
     /* Flexbox for Dynamic Layout */
     .gallery {
         display: flex;
@@ -29,11 +38,11 @@
     }
 
     /* Pseudo-Element: Add Decorative Lines Before Gallery */
-    .gallery::before {
+    /* .gallery::before {
         content: "Featured Cards";
         font-size: 1.5rem;
         font-weight: bold;
-    }
+    } */
 
     /* Pseudo-Element: Add Decorative Line After Gallery */
     .gallery::after {
@@ -43,6 +52,7 @@
         background: linear-gradient(to right, #007bff, transparent);
         margin: 2rem auto 0 auto;
     }
+
 
     /* Highlight the first and last child in the gallery */
     :global(.gallery > .card:first-child) {
