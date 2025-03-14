@@ -16,8 +16,8 @@
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li> 
    <!-- Profile Icon as Navigation Button -->
-        <li><a href="/profile">
-        <img src="/user.png" alt="Profile" class="profile-icon"></a></li>
+        <a href="/profile">
+        <img src="/user.png" alt="Profile" class="profile-icon"></a>
     </ul>
 </nav>
 
@@ -26,7 +26,7 @@
     /* Base Navigation Styling */
     .nav {
         background-color: rgb(44, 25, 7);
-        padding: 1rem;
+        padding: 0.5rem;
         text-align: center;
     }
 

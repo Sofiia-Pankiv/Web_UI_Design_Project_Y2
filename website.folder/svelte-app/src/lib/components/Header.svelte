@@ -29,9 +29,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color:#ddc08b;
+        background-color:#c9af80;
         color: rgb(255, 255, 255);
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     /* Search Bar Styling */
