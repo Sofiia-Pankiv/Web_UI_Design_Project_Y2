@@ -1,5 +1,6 @@
 <script>
     let isOpen = false; // Menu state (open/closed)
+    let showPaintingsMenu = false;  // Controls the second bar
 </script>
 
 
@@ -12,14 +13,27 @@
 
     <!-- Navigation links -->
     <ul class:open={isOpen}>
+        <li><a href="#" on:click={(e) => { e.preventDefault(); showPaintingsMenu = !showPaintingsMenu; }}>Paintings</a></li>
+        <li><a href="/sculpture">Sculptures</a></li>
+        <li><a href="/Illustration">Illustrations</a></li>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li> 
-   <!-- Profile Icon as Navigation Button -->
-        <a href="/profile">
-        <img src="/user.png" alt="Profile" class="profile-icon"></a>
     </ul>
 </nav>
+
+<!-- Second Navigation Bar (Appears when 'Paintings' is clicked) -->
+{#if showPaintingsMenu}
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="/painting/oil">Oil Paintings</a></li>
+            <li><a href="/painting/acrylic">Acrylic Paintings</a></li>
+            <li><a href="/painting/watercolor">Watercolor Paintings</a></li>
+            <li><a href="/painting/digital">Digital Paintings</a></li>
+            <li><a href="/painting/abstract">Abstract Art</a></li>
+        </ul>
+    </nav>
+{/if}
 
 
 <style>
@@ -53,13 +67,57 @@
         transition: all 0.3s ease-in-out; /* Smooth transition effect */
     }
 
-    /* Profile Icon Styling */
-    .profile-icon {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
+    .nav ul li a:hover {
+        background-color: white;
+        color: black;
+    }
+
+     /* Sub Navigation (Appears Below Brown Bar) */
+     .sub-nav {
+        background-color: rgb(96, 62, 24);  /* Brown color */
+        width: 100%;  /* Make it stretch across the whole screen */
+        padding: 0.5rem 0;
+        text-align: center;
+        position: fixed;  /* Position it above other content */
+        top: 11rem;  /* Keep it below the main bar */
+        left: 0;
+        z-index: 9999;  /* Ensure it hovers above everything else */
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .sub-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .sub-nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 12px;
         border: 2px solid white;
-        vertical-align: middle;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .sub-nav ul li a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     /* 🍔 Burger Menu (Hidden on Large Screens) */
@@ -103,10 +161,11 @@
             padding: 10px 20px;
         }
 
-        /* Center the profile icon in mobile */
-        .profile-icon {
-            display: block;
-            margin: 0 auto;
+        .sub-nav ul {
+            flex-direction: column;
+        }
+        .sub-nav {
+            width: 90%;  /* Make sub-nav narrower on mobile */
         }
     }
 </style> 

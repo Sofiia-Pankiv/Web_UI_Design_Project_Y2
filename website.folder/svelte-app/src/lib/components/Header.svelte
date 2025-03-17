@@ -1,6 +1,11 @@
 <script>
      // import Navigation.svelte from lib folder
     import { Navigation } from "$lib"
+    import { goto } from "$app/navigation"; // Import SvelteKit's navigation function
+
+    function goToProfile() {
+        goto("/profile"); // Navigate to the profile page (src/routes/profile/page.svelte)
+    }
 </script>
 
 
@@ -15,7 +20,14 @@
      <div class="search-container">
         <input type="text" class="search-bar" placeholder="Search..." />
     </div>
-    
+
+     <!-- Profile Button -->
+    <div class="profile">
+        <button class="profile-btn" on:click={goToProfile}> <!-- ✅ Added on:click -->
+            <img src="/user.png" alt="Profile" class="profile-icon" />
+         </button>
+    </div>
+
 </header>
 
 <div class="brown-bar">
@@ -48,6 +60,25 @@
         font-size: 1rem;
         width: 800px;
         max-width: 60%;
+    }
+
+     /* Profile Button Styling */
+     .profile {
+        display: flex;
+        align-items: center;
+    }
+
+    .profile-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .profile-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
     }
 
      /* Brown Bar Styling */
@@ -95,6 +126,10 @@
         .brown-bar {
             justify-content: center;
             padding-left: 0;
+        }
+
+        .profile {
+            margin-top: 10px;
         }
     }
 </style>
