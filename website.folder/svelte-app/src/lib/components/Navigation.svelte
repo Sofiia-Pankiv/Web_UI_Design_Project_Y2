@@ -13,12 +13,12 @@
 
     <!-- Navigation links -->
     <ul class:open={isOpen}>
-        <li><a href="#" on:click={(e) => { e.preventDefault(); showPaintingsMenu = !showPaintingsMenu; }}>Paintings</a></li>
+        <li><a href="/" class="special">Home</a></li>
+        <li><a href="/about" class="special">About</a></li>
+        <li><a href="/contact" class="special">Contact</a></li> 
+        <li><a href="/painting" on:click={(e) => { e.preventDefault(); showPaintingsMenu = !showPaintingsMenu; }}>Paintings</a></li>
         <li><a href="/sculpture">Sculptures</a></li>
         <li><a href="/Illustration">Illustrations</a></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li> 
     </ul>
 </nav>
 
@@ -53,6 +53,19 @@
         gap: 20px;
     }
 
+    /* Styling for Home, About, and Contact buttons */
+    .nav ul li a.special {
+        background-color: white;  /* White background */
+        color: rgb(44, 25, 7);  /* Brown text */
+        border: 2px solid rgb(44, 25, 7); /* Brown border */
+    }
+
+    /* Hover effect: reverse colors */
+    .nav ul li a.special:hover {
+        background-color: rgb(44, 25, 7); /* Brown background */
+        color: white; /* White text */
+    }
+
     .nav ul li {
         display: inline-block;
     }
@@ -78,8 +91,8 @@
         width: 100%;  /* Make it stretch across the whole screen */
         padding: 0.5rem 0;
         text-align: center;
-        position: fixed;  /* Position it above other content */
-        top: 11rem;  /* Keep it below the main bar */
+        position:relative;  /* Position it above other content */
+        top: 10rem;  /* Keep it below the main bar */
         left: 0;
         z-index: 9999;  /* Ensure it hovers above everything else */
         animation: fadeIn 0.3s ease-in-out;
@@ -147,25 +160,3 @@
             top: 90px;
             left: 0;
             width: 100%;
-            background: #007bff;
-            text-align: left;
-            padding: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-    
-        .nav ul.open {
-            display: flex; /* Show menu when isOpen is true */
-        }
-
-        .nav ul li {
-            padding: 10px 20px;
-        }
-
-        .sub-nav ul {
-            flex-direction: column;
-        }
-        .sub-nav {
-            width: 90%;  /* Make sub-nav narrower on mobile */
-        }
-    }
-</style> 
