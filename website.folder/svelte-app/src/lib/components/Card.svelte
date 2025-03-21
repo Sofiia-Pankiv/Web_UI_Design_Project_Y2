@@ -2,13 +2,19 @@
 // Props allow customization of card title and description
     export let title = "Card Title";
     export let description = "This is a description";
+    export let image; // Image prop
 </script>
 
 <!-- Card container-->
 <div class="card">
     <!-- Card container-->
-    <img src="/placeholder.JPG" alt="Placeholder">
+    <!-- <img src="/placeholder.JPG" alt="Placeholder"> -->
+    <!-- <img src="/abstract.jpg" alt="Abstract">
+    <img src="/bull.jpg" alt="Bull">
+    <img src="/lightHouse.jpg" alt="LightHouse">  -->
 
+    <img src={image} alt={title} class="card-image" />
+    
     <!-- Card container-->
     <div class="content">
         <h2>{title}</h2>

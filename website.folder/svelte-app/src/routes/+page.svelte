@@ -1,6 +1,16 @@
 <script>
+// @ts-nocheck
+
     import { onMount } from 'svelte';
     import { Card } from '$lib';
+
+ // Array of image paths with descriptions
+ let cards = [
+        { image: "/abstract.jpg", title: "Abstract Art", description: "A beautiful abstract painting" },
+        { image: "/bull.jpg", title: "Bull Painting", description: "A powerful bull artwork" },
+        { image: "/lightHouse.jpg", title: "Lighthouse", description: "A scenic lighthouse view" },
+        { image: "/placeholder.JPG", title: "Placeholder", description: "A generic placeholder image" }
+    ];
 
     onMount(()  => {
         console.log("Home Page Loaded")
@@ -13,10 +23,18 @@
 <p>This is Homepage of our Website for Buying and Selling Original Artworks!</p> -->
 
 <div class="gallery">
-    <Card title="Card 1" description="The first card" />
+    <!-- <img src="/abstract.jpg" alt="Abstract">
+    <img src="/bull.jpg" alt="Bull">
+    <img src="/lightHouse.jpg" alt="LightHouse"> -->
+<!-- 
+    <Card image="/abstract.jpg" title="Card 1" description="The first card" />
     <Card title="Card 2" description="The second card" />
     <Card title="Card 3" description="The third card" />
-    <Card title="Card 4" description="The fourth card" />
+    <Card title="Card 4" description="The fourth card" /> -->
+
+    {#each cards as card}
+     <Card image={card.image} title={card.title} description={card.description} />
+    {/each}
 
 </div>
 
