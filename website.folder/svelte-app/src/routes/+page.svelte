@@ -6,10 +6,10 @@
 
  // Array of image paths with descriptions
  let cards = [
-        { image: "/abstract.jpg", title: "Abstract Art", description: "A beautiful abstract painting" },
-        { image: "/bull.jpg", title: "Bull Painting", description: "A powerful bull artwork" },
-        { image: "/lightHouse.jpg", title: "Lighthouse", description: "A scenic lighthouse view" },
-        { image: "/placeholder.JPG", title: "Placeholder", description: "A generic placeholder image" }
+        { image: "/abstract.jpg", title: "Abstract Art", price: "$1545", description: "A beautiful abstract painting" },
+        { image: "/bull.jpg", title: "Bull Painting", price: "$200", description: "A powerful bull artwork" },
+        { image: "/Sculpure.jpg", title: "SculptureHead", price: "$5000", description: "A scenic lighthouse view" },
+        { image: "/placeholder.JPG", title: "Balance", price: "$50", description: "An ink print of fish which represent yin and yang" }
     ];
 
     onMount(()  => {
@@ -33,7 +33,7 @@
     <Card title="Card 4" description="The fourth card" /> -->
 
     {#each cards as card}
-     <Card image={card.image} title={card.title} description={card.description} />
+     <Card image={card.image} title={card.title} price={card.price} description={card.description} />
     {/each}
 
 </div>

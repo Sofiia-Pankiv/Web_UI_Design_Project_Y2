@@ -3,6 +3,7 @@
     export let title = "Card Title";
     export let description = "This is a description";
     export let image; // Image prop
+    export let price;
 </script>
 
 <!-- Card container-->
@@ -18,6 +19,7 @@
     <!-- Card container-->
     <div class="content">
         <h2>{title}</h2>
+        <p class="price">{price}</p>
         <p>{description}</p>
     </div>
 </div>
@@ -79,6 +81,13 @@
         background: #007bff;
         margin: 0 auto 10px auto;
         transition: width 0.3s ease-in-out;
+    }
+
+    .price {
+        font-size: 16px;
+        font-weight: bold;
+        color: green;
+        margin-bottom: 10px; /* Adds spacing between price and description */
     }
 
     /* When .card is hovered, expand the decorative effect to 80% */
