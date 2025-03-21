@@ -7,9 +7,9 @@
 <!-- Navigation container -->
 <nav class="nav">
     <!-- Burger Menu Button (for small screens) -->
-    <button class="burger" on:click={() => isOpen = !isOpen} aria-label="Toggle navigation">
+    <!-- <button class="burger" on:click={() => isOpen = !isOpen} aria-label="Toggle navigation">
         ☰
-    </button>
+    </button> -->
 
     <!-- Navigation links -->
     <ul class:open={isOpen}>
@@ -91,7 +91,7 @@
         width: 100%;  /* Make it stretch across the whole screen */
         padding: 0.5rem 0;
         text-align: center;
-        position: fixed;  /* Position it above other content */
+        position:absolute;  /* Position it above other content */
         top: 11rem;  /* Keep it below the main bar */
         left: 0;
         z-index: 9999;  /* Ensure it hovers above everything else */
