@@ -6,6 +6,10 @@
    function goToProfile() {
        goto("/profile"); // Navigate to the profile page (src/routes/profile/page.svelte)
    }
+
+   function goToBasket() {
+       goto("/basket"); // Navigate to the basket page (src/routes/basket/page.svelte)
+   }
 </script>
 
 
@@ -23,10 +27,17 @@
 
     <!-- Profile Button -->
    <div class="profile">
-       <button class="profile-btn" on:click={goToProfile}> <!-- ✅ Added on:click -->
+       <button class="profile-btn" on:click={goToProfile}> <!-- Added on:click -->
            <img src="/user.png" alt="Profile" class="profile-icon" />
         </button>
    </div>
+
+<!-- Basket Button -->
+<div class="basket">
+    <button class="basket-btn" on:click={goToBasket}> <!-- Added on:click -->
+        <img src="/cart.png" alt="Basket" class="basket-icon" />
+     </button>
+</div>
 
 </header>
 
@@ -80,6 +91,20 @@
        height: 40px;
        border-radius: 50%;
    }
+
+   .basket-btn {
+       background: none;
+       border: none;
+       cursor: pointer;
+       padding: 5px;
+   }
+
+   .basket-icon {
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+   }
+
 
     /* Brown Bar Styling */
     .brown-bar {

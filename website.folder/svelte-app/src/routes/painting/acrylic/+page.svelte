@@ -8,7 +8,7 @@
  let cards = [
         { image: "/evening.jpg", title: "Summer Evening", price: "$545", description: "A beautiful painting of a view of an evening" },
         { image: "/daisy.jpg", title: "Daisies", price: "$350", description: "View of Daisies" },
-        { image: "/dogCat.jpg", title: "Warmth", price: "$470", description: "Acrylic painting of a sleeping dog and a cat under the sunshine" },
+        { image: "/dogCat.jpg", title: "Warmth", price: "$470", description: "Acrylic painting of a sleeping dog and a cat under the sunshine", link: "/painting/acrylic/catDogPage" },
         { image: "/smokingDuck.jpeg", title: "Duck", price: "$125", description: "Acrylic painting of the smoking duck" },
         { image: "/lily.jpg", title: "Lilies", price: "$500", description: "Flowers on the beige background" }
     ];
@@ -22,19 +22,25 @@
 
 <div class="gallery">
     {#each cards as card}
-     <Card image={card.image} title={card.title} price={card.price} description={card.description} />
-    {/each}
+    {#if card.link}
+        <!-- Wrap with <a> tag for navigation -->
+        <a href={card.link} class="card-link">
+            <Card image={card.image} title={card.title} price={card.price} description={card.description} />
+        </a>
+    {:else}
+        <Card image={card.image} title={card.title} price={card.price} description={card.description} />
+    {/if}
+{/each}
 
 </div>
 
 <style>
-      .header-image {
-        width: 1350px; /* Зробити картинку вужчою */
-        max-width: 800px; 
-        height: 250px;
-        display: block;
-        margin: 0 auto; 
+
+    .card-link {
+        text-decoration: none; /* Remove default link styles */
+        color: inherit;
     }
+    
     /* Flexbox for Dynamic Layout*/
     .gallery {
         display: flex;

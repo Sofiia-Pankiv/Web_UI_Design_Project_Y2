@@ -10,7 +10,7 @@
         { image: "/lightHouse.jpg", title: "Light House", price: "$340", description: "Watercolor painting" },
         { image: "/retro.jpg", title: "Closed! Frieder, do you realize what that means...", price: "$5000", description: "Moody and atmospheric acrylic painting" },
         { image: "/waterPortrait.jpg", title: "Mystery Girl", price: "$120", description: "Watercolor portrait of a woman" },
-        { image: "/dogCat.jpg", title: "Warmth", price: "$470", description: "Acrylic painting of a sleeping dog and a cat under the sunshine" }
+        { image: "/dogCat.jpg", title: "Warmth", price: "$470", description: "Acrylic painting of a sleeping dog and a cat under the sunshine" , link: "/painting/acrylic/catDogPage"}
     ];
 
     onMount(() => {
@@ -22,19 +22,25 @@
 
 <div class="gallery">
     {#each cards as card}
-     <Card image={card.image} title={card.title} price={card.price} description={card.description} />
-    {/each}
+    {#if card.link}
+        <!-- Wrap with <a> tag for navigation -->
+        <a href={card.link} class="card-link">
+            <Card image={card.image} title={card.title} price={card.price} description={card.description} />
+        </a>
+    {:else}
+        <Card image={card.image} title={card.title} price={card.price} description={card.description} />
+    {/if}
+{/each}
 
 </div>
 
 <style>
-      .header-image {
-        width: 1350px; /* Зробити картинку вужчою */
-        max-width: 800px; 
-        height: 250px;
-        display: block;
-        margin: 0 auto; 
+
+    .card-link {
+        text-decoration: none; /* Remove default link styles */
+        color: inherit;
     }
+      
     /* Flexbox for Dynamic Layout*/
     .gallery {
         display: flex;
