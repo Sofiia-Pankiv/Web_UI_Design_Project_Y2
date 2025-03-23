@@ -6,10 +6,10 @@
 
  // Array of image paths with descriptions
  let cards = [
-        { image: "/abstract.jpg", title: "Abstract Art", price: "$1545", description: "A beautiful abstract painting" },
-        { image: "/bull.jpg", title: "Bull Painting", price: "$200", description: "A powerful bull artwork" },
-        { image: "/Sculpure.jpg", title: "SculptureHead", price: "$5000", description: "A scenic lighthouse view" },
-        { image: "/placeholder.JPG", title: "Balance", price: "$50", description: "An ink print of fish which represent yin and yang" }
+        { image: "/abstract1.jpg", title: "Abstract Art", price: "$1545", description: "A beautiful abstract painting" },
+        { image: "/bull1.jpg", title: "Bull Painting", price: "$200", description: "A powerful bull artwork" },
+        { image: "/sculpture.jpg", title: "SculptureHead", price: "$5000", description: "A scenic lighthouse view" },
+        { image: "/placeholder1.JPG", title: "Balance", price: "$50", description: "An ink print of fish which represent yin and yang" }
     ];
 
     onMount(()  => {

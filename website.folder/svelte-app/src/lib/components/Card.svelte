@@ -8,12 +8,6 @@
 
 <!-- Card container-->
 <div class="card">
-    <!-- Card container-->
-    <!-- <img src="/placeholder.JPG" alt="Placeholder"> -->
-    <!-- <img src="/abstract.jpg" alt="Abstract">
-    <img src="/bull.jpg" alt="Bull">
-    <img src="/lightHouse.jpg" alt="LightHouse">  -->
-
     <img src={image} alt={title} class="card-image" />
     
     <!-- Card container-->
@@ -42,8 +36,8 @@
     /* Advanced Selector: Direct Child Combinator (>)
        This ensures that only direct `img` elements inside `.card` get these styles */
     .card > img {
-        width: 100%; /* Responsive width */
-        height: auto; /* Maintain aspect ratio */
+        width: 280px; /* Responsive width */
+        height: 370px; /* Maintain aspect ratio */
         border-radius: 8px 8px 0 0; /* Round only the top corners */
     }
 
