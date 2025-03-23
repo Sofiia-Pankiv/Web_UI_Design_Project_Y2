@@ -19,19 +19,7 @@
 
 <img src="/artAd.png" alt="ART" class="header-image" />
 
-<!-- <h1>Welcome to LeArt</h1>
-<p>This is Homepage of our Website for Buying and Selling Original Artworks!</p> -->
-
 <div class="gallery">
-    <!-- <img src="/abstract.jpg" alt="Abstract">
-    <img src="/bull.jpg" alt="Bull">
-    <img src="/lightHouse.jpg" alt="LightHouse"> -->
-<!-- 
-    <Card image="/abstract.jpg" title="Card 1" description="The first card" />
-    <Card title="Card 2" description="The second card" />
-    <Card title="Card 3" description="The third card" />
-    <Card title="Card 4" description="The fourth card" /> -->
-
     {#each cards as card}
      <Card image={card.image} title={card.title} price={card.price} description={card.description} />
     {/each}
@@ -67,23 +55,14 @@
         content: "";
         width: 60%;
         height: 3px;
-        background: linear-gradient(to right, #007bff, transparent);
+        background: linear-gradient(to right, rgb(49, 31, 5), transparent);
         margin: 2rem auto 0 auto;
     }
 
 
     /* Highlight the first and last child in the gallery */
-    :global(.gallery > .card:first-child) {
-        border: 3px solid gold; /* Emphasize the first card */
-    }
-
-    :global(.gallery > .card:last-child) {
-        border: 3px solid crimson; /* Emphasize the last card */
-    }
-
-    /* Apply a different background color to even-numbered cards */
-    :global(.gallery > .card:nth-child(even)) {
-        background-color: #ebebeb;
+    :global(.gallery > .card) {
+        border: 3px solid rgb(49, 31, 5); /* Emphasize the first card */
     }
 
     /* Apply a hover effect: spotlight effect on the hovered card */
@@ -104,10 +83,7 @@
         opacity: 0.9; /* Slightly fade them */
     }
 
-    /* Apply a special styling to every third card */
-    :global(.gallery > .card:nth-child(3n)) {
-        border-left: 5px solid #98caff; /* Left accent border */
-    }
+   
 
     /* Exclude the first and last card from being affected by nth-child styling */
     :global(.gallery > .card:not(:first-child):not(:last-child)) {

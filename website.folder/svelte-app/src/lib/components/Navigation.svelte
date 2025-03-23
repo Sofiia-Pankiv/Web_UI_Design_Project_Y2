@@ -1,22 +1,35 @@
 <script>
     let isOpen = false; // Menu state (open/closed)
     let showPaintingsMenu = false;  // Controls the second bar
+
+    
+    import { onMount } from "svelte";
+
+    let currentPage = ""; // Tracks the current URL
+    onMount(() => {
+        currentPage = window.location.pathname; // Get the current page on load
+    });
+
+    // @ts-ignore
+    function handlePaintingsClick(event) {
+        event.preventDefault(); // Prevent default navigation
+
+        if (currentPage !== "/painting") {
+            window.location.href = "/painting"; // Navigate to painting page
+        } else {
+            showPaintingsMenu = !showPaintingsMenu; // Toggle sub-nav on second click
+        }
+    }
 </script>
 
 
 <!-- Navigation container -->
 <nav class="nav">
-    <!-- Burger Menu Button (for small screens) -->
-    <!-- <button class="burger" on:click={() => isOpen = !isOpen} aria-label="Toggle navigation">
-        ☰
-    </button> -->
-
-    <!-- Navigation links -->
     <ul class:open={isOpen}>
         <li><a href="/" class="special">Home</a></li>
         <li><a href="/about" class="special">About</a></li>
         <li><a href="/contact" class="special">Contact</a></li>
-        <li><a href="#" on:click={(e) => { e.preventDefault(); showPaintingsMenu = !showPaintingsMenu; }}>Paintings</a></li>
+        <li><a href="/painting" on:click={handlePaintingsClick}>Paintings</a></li>
         <li><a href="/sculpture">Sculptures</a></li>
         <li><a href="/Illustration">Illustrations</a></li> 
     </ul>
@@ -134,7 +147,7 @@
     }
 
     /* 🍔 Burger Menu (Hidden on Large Screens) */
-    .burger {
+    /* .burger {
         display: none;
         font-size: 2rem;
         background: none;
@@ -144,14 +157,14 @@
         position: absolute;
         top: 1rem;
         left: 1rem;
-    }
+    } */
 
     /* Mobile Navigation: Show Burger Menu */
     @media (max-width: 768px) {
-        .burger {
+        /* .burger {
             display: block; /* Show burger icon */
-            left: 90%;
-        }
+            /* left: 90%;
+        }  */
 
         .nav ul {
             display: none; /* Hide menu by default */

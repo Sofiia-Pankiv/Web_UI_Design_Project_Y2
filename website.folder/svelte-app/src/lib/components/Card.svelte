@@ -78,7 +78,7 @@
         display: block;
         width: 40%;
         height: 2px;
-        background: #007bff;
+        background: rgb(49, 31, 5);
         margin: 0 auto 10px auto;
         transition: width 0.3s ease-in-out;
     }
