@@ -4,7 +4,7 @@
 
    :root {
     /* Color Variables */
-    --primary-color: #007bff;
+    --primary-color: rgb(49, 31, 5);
     --background-color: #e7d3af;
     --text-color: #333;
     --link-hover-color: rgb(44, 25, 7);
@@ -77,4 +77,11 @@ a:hover {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--spacing-medium);
+}
+
+
+.card-link > img {
+    width: 280px; /* Responsive width */
+    height: 370px; /* Maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Round only the top corners */
 }

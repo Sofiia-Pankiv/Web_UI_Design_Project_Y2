@@ -25,7 +25,7 @@
     .card {
         background: white;
         border-radius: 10px; /* Rounded corners */
-        border: 2px solid #007bff;
+        border: 3px solid rgb(49, 31, 5);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         overflow: hidden;
         width: 280px;
@@ -55,7 +55,7 @@
     /* Description Styling */
     .content p {
         font-size: 1rem;
-        color: #555;
+        color: rgb(85, 85, 85);
     }
 
     /* Pseudo-Class: Hover Effect

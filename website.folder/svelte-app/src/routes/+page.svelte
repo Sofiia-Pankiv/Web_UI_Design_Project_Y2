@@ -43,13 +43,7 @@
         margin-top: 2rem;
     }
 
-    /* Pseudo-Element: Add Decorative Lines Before Gallery */
-    /* .gallery::before {
-        content: "Featured Cards";
-        font-size: 1.5rem;
-        font-weight: bold;
-    } */
-
+    
     /* Pseudo-Element: Add Decorative Line After Gallery */
     .gallery::after {
         content: "";
@@ -83,7 +77,6 @@
         opacity: 0.9; /* Slightly fade them */
     }
 
-   
 
     /* Exclude the first and last card from being affected by nth-child styling */
     :global(.gallery > .card:not(:first-child):not(:last-child)) {
