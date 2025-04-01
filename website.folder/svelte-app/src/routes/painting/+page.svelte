@@ -1,54 +1,55 @@
 <script>
     // @ts-nocheck
-
+    import { catalogue } from '$lib/catalogue';
     import { onMount } from 'svelte';
     import { Card } from '$lib';
-
- // Array of image paths with descriptions
- let cards = [
-        { image: "/poster.jpg", title: "Poster", price: "$1450", description: "Inspirational ink painting" },
-        { image: "/lightHouse.jpg", title: "Light House", price: "$340", description: "Watercolor painting" },
-        { image: "/retro.jpg", title: "Closed! Frieder, do you realize what that means...", price: "$5000", description: "Moody and atmospheric acrylic painting" },
-        { image: "/waterPortrait.jpg", title: "Mystery Girl", price: "$120", description: "Watercolor portrait of a woman" },
-        { image: "/dogCat.jpg", title: "Warmth", price: "$470", description: "Acrylic painting of a sleeping dog and a cat under the sunshine" , link: "/painting/acrylic/catDogPage"}
-    ];
+    import { goto } from '$app/navigation';
 
     onMount(() => {
         console.log("Paintings Page Loaded");
     });
+
+    /** Function to navigate to the item's detail page
+	 * @param {string} id
+	 */
+    function viewItem(id) {
+        goto(`/painting/${id}`);
+    }
 </script>
 
 <h1>Paintings</h1>
 
 <div class="gallery">
-    {#each cards as card}
-    {#if card.link}
+    {#each catalogue as card}
         <!-- Wrap with <a> tag for navigation -->
-        <a href={card.link} class="card-link">
+        <button class="Card" on:click={() => viewItem(card.id)}>
             <Card image={card.image} title={card.title} price={card.price} description={card.description} />
-        </a>
-    {:else}
-        <Card image={card.image} title={card.title} price={card.price} description={card.description} />
-    {/if}
-{/each}
-
+        </button>
+    {/each}
 </div>
 
-<style>
 
-    .card-link {
-        text-decoration: none; /* Remove default link styles */
-        color: inherit;
-    }
-      
+
+<style>
+     button{
+        width: 0px;  /* Set button width */
+        height: 0px;  /* Set button height */
+        opacity: 1;
+    } 
+
     /* Flexbox for Dynamic Layout*/
     .gallery {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-rows: 100px 200px;
+        gap: 7rem;
+
         flex-wrap: wrap;
-        gap: 20px;
+        
         justify-content: center;
         margin-top: 2rem;
     }
+
 
     /* Pseudo-Element: Add Decorative Lines Before Gallery */
      .gallery::before {
@@ -89,10 +90,5 @@
         opacity: 0.9; /* Slightly fade them */
     }
 
-   
 
-    /* Exclude the first and last card from being affected by nth-child styling */
-    :global(.gallery > .card:not(:first-child):not(:last-child)) {
-        border-radius: 18px; /* Softens edges for middle cards */
-    }
 </style>

@@ -52,7 +52,7 @@
        display: flex;
        align-items: center;
        justify-content: space-between;
-       background-color:#c9af80;
+       background-color:rgb(201, 175, 128);
        color: rgb(255, 255, 255);
        padding: 0.5rem;
    }
