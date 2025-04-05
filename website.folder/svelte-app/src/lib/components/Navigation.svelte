@@ -29,9 +29,11 @@
         <li><a href="/" class="special">Home</a></li>
         <li><a href="/about" class="special">About</a></li>
         <li><a href="/contact" class="special">Contact</a></li>
+        <li><a href="/selling form" class = "special">Selling Form</a></li>
         <li><a href="/painting" on:click={handlePaintingsClick}>Paintings</a></li>
         <li><a href="/sculpture">Sculptures</a></li>
         <li><a href="/Illustration">Illustrations</a></li> 
+        
     </ul>
 </nav>
 
