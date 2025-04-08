@@ -35,7 +35,7 @@
 
     /* Card style for each item */
     .card {
-        background: #f5f5f5;
+        background: #e7d3af;
         padding: 1rem;
         border-radius: 8px;
         cursor: pointer;

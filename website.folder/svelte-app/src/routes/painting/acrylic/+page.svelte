@@ -1,6 +1,6 @@
 <script>
     // @ts-nocheck
-    import { catalogue, catalogueAcrylic } from '$lib/catalogue';
+    import { catalogue } from '$lib/catalogue';
     import { onMount } from 'svelte';
     import { Card } from '$lib';
     import { goto } from '$app/navigation';
@@ -9,22 +9,23 @@
         console.log("Acrylic Page Loaded");
     });
 
-    /** Function to navigate to the item's detail page
-	 * @param {string} id
-	 */
-     function viewItem(id) {
-        goto(`/painting/${id}`);
-    }
+    let selectedCategory = "acrylic";
+
+    
+    
+
 </script>
 
 <h1>Acrylic</h1>
 
 <div class="gallery">
-    {#each catalogueAcrylic as card}
+    {#each catalogue as card}
         <!-- Wrap with <a> tag for navigation -->
-        <button class="Card" on:click={() => viewItem(card.id)}>
-            <Card image={card.image} title={card.title} price={card.price} description={card.description} />
-        </button>
+         {#if selectedCategory === "acrylic" || card.category.includes(selectedCategory)}
+            <button class="Card" on:click={() => viewItem(card.id)}>
+                <Card image={card.image} title={card.title} price={card.price} description={card.description} />
+            </button>
+        {/if}
     {/each}
 </div>
 

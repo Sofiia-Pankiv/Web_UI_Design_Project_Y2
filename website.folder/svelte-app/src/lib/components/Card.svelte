@@ -36,9 +36,12 @@
     /* Advanced Selector: Direct Child Combinator (>)
        This ensures that only direct `img` elements inside `.card` get these styles */
     .card > img {
-        width: 280px; /* Responsive width */
-        height: 370px; /* Maintain aspect ratio */
-        border-radius: 8px 8px 0 0; /* Round only the top corners */
+        width: 100%; /* Make it responsive */
+    max-width: 280px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 370px; /* Set max height */
+    object-fit: cover; /* Ensures image fits nicely */
+    border-radius: 8px 8px 0 0; /* Round only the top corners */
     }
 
     /* Content Styling: Padding for better spacing */

@@ -1,3 +1,4 @@
+
 // @ts-ignore
 import { catalogue } from '$lib/catalogue.js';
 
@@ -11,6 +12,8 @@ export function load({ params }) {
   // @ts-ignore
   const item = catalogue.find((i) => i.id === params.id);
 
+
+
   if (!item) {
     // You could use `error(404, 'Item not found')` here if preferred
     throw new Error('Item not found');
@@ -18,3 +21,4 @@ export function load({ params }) {
 
   return { item };
 }
+  

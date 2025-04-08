@@ -5,6 +5,8 @@
     import { Card } from '$lib';
     import { goto } from '$app/navigation';
 
+    let selectedCategory = "";
+
     onMount(() => {
         console.log("Paintings Page Loaded");
     });
@@ -22,9 +24,11 @@
 <div class="gallery">
     {#each catalogue as card}
         <!-- Wrap with <a> tag for navigation -->
-        <button class="Card" on:click={() => viewItem(card.id)}>
-            <Card image={card.image} title={card.title} price={card.price} description={card.description} />
-        </button>
+         {#if selectedCategory === "" || card.category.includes(selectedCategory)}
+            <button class="Card" on:click={() => viewItem(card.id)}>
+                <Card image={card.image} title={card.title} price={card.price} description={card.description} />
+            </button>
+        {/if}
     {/each}
 </div>
 
@@ -32,22 +36,21 @@
 
 <style>
      button{
-        width: 0px;  /* Set button width */
-        height: 0px;  /* Set button height */
-        opacity: 1;
+        width: 1px;  /* Set button width */
+        height: 1px;  /* Set button height */
+        opacity: 0;
     } 
 
     /* Flexbox for Dynamic Layout*/
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        grid-template-rows: 100px 200px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusts to card size */
+    grid-template-rows: 100px 200px;
         gap: 7rem;
 
         flex-wrap: wrap;
-        
-        justify-content: center;
-        margin-top: 2rem;
+    align-items: stretch; /* Ensure all cards fill the row height */
+    margin-top: 2rem;
     }
 
 
