@@ -1,7 +1,8 @@
 <script>
+    // @ts-ignore
     let isOpen = false; // Menu state (open/closed)
     let showPaintingsMenu = false;  // Controls the second bar
-
+    let selectedCategory = "";
     
     import { onMount } from "svelte";
 
@@ -10,6 +11,7 @@
         currentPage = window.location.pathname; // Get the current page on load
     });
 
+    // @ts-ignore
     // @ts-ignore
     function handlePaintingsClick(event) {
         event.preventDefault(); // Prevent default navigation
@@ -20,35 +22,26 @@
             showPaintingsMenu = !showPaintingsMenu; // Toggle sub-nav on second click
         }
     }
+
+  
+
 </script>
 
 
 <!-- Navigation container -->
 <nav class="nav">
     <ul class:open={isOpen}>
-        <li><a href="/" class="special">Home</a></li>
+        <!-- <li><a href="/" class="special">Home</a></li>
         <li><a href="/about" class="special">About</a></li>
         <li><a href="/contact" class="special">Contact</a></li>
-        <li><a href="/selling form" class = "special">Selling Form</a></li>
-        <li><a href="/painting" on:click={handlePaintingsClick}>Paintings</a></li>
+        <li><a href="/selling form" class = "special">Selling Form</a></li> -->
+        <li><a href="/painting">Paintings</a></li>
         <li><a href="/sculpture">Sculptures</a></li>
         <li><a href="/Illustration">Illustrations</a></li> 
         
     </ul>
 </nav>
 
-<!-- Second Navigation Bar (Appears when 'Paintings' is clicked) -->
-{#if showPaintingsMenu}
-    <nav class="sub-nav">
-        <ul>
-            <li><a href="/painting/oil">Oil Paintings</a></li>
-            <li><a href="/painting/acrylic">Acrylic Paintings</a></li>
-            <li><a href="/painting/watercolor">Watercolor Paintings</a></li>
-            <li><a href="/painting/digital">Digital Paintings</a></li>
-            <li><a href="/painting/abstract">Abstract Art</a></li>
-        </ul>
-    </nav>
-{/if}
 
 
 <style>
@@ -101,19 +94,19 @@
     }
 
      /* Sub Navigation (Appears Below Brown Bar) */
-     .sub-nav {
+     /* .sub-nav {
         background-color: rgb(96, 62, 24);  /* Brown color */
-        width: 100%;  /* Make it stretch across the whole screen */
-        padding: 0.5rem 0;
-        text-align: center;
-        position:absolute;  /* Position it above other content */
-        top: 11rem;  /* Keep it below the main bar */
-        left: 0;
-        z-index: 9999;  /* Ensure it hovers above everything else */
-        animation: fadeIn 0.3s ease-in-out;
-    }
+       /* width: 100%;  /* Make it stretch across the whole screen */
+       /* padding: 0.5rem 0;
+       /* text-align: center;
+       /* position:absolute;  /* Position it above other content */
+       /* top: 11rem;  /* Keep it below the main bar */
+       /* left: 0;
+       /* z-index: 9999;  /* Ensure it hovers above everything else */
+        /* animation: fadeIn 0.3s ease-in-out;
+    } */
 
-    .sub-nav ul {
+    /* .sub-nav ul {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -135,7 +128,7 @@
     .sub-nav ul li a:hover {
         background-color: white;
         color: black;
-    }
+    } */ 
 
     @keyframes fadeIn {
         from {
@@ -189,11 +182,11 @@
             padding: 10px 20px;
         }
 
-        .sub-nav ul {
+        /* .sub-nav ul {
             flex-direction: column;
         }
         .sub-nav {
             width: 90%;  /* Make sub-nav narrower on mobile */
-        }
+        /*} */
     }
 </style> 

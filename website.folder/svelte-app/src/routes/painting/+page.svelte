@@ -1,6 +1,6 @@
 <script>
     // @ts-nocheck
-    import { catalogue } from '$lib/catalogue';
+    import { catalogueP} from '$lib/catalogueP';
     import { onMount } from 'svelte';
     import { Card } from '$lib';
     import { goto } from '$app/navigation';
@@ -21,12 +21,12 @@
 
 <h1>Paintings</h1>
 
-<div class="gallery">
-    {#each catalogue as card}
+<div class="gallery" style="display: contents">
+    {#each catalogueP as cardp}
         <!-- Wrap with <a> tag for navigation -->
-         {#if selectedCategory === "" || card.category.includes(selectedCategory)}
-            <button class="Card" on:click={() => viewItem(card.id)}>
-                <Card image={card.image} title={card.title} price={card.price} description={card.description} />
+         {#if selectedCategory === "" || cardp.category.includes(selectedCategory)}
+            <button class="Card" on:click={() => viewItem(cardp.id)}>
+                <Card image={cardp.image} title={cardp.title} price={cardp.price} description={cardp.description} />
             </button>
         {/if}
     {/each}

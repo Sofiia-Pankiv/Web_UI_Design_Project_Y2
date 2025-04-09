@@ -1,6 +1,6 @@
 
 // @ts-ignore
-import { catalogue } from '$lib/catalogue.js';
+import { catalogueP } from '$lib/catalogueP.js';
 
 /**
  * SvelteKit page load function.
@@ -10,7 +10,7 @@ import { catalogue } from '$lib/catalogue.js';
 // @ts-ignore
 export function load({ params }) {
   // @ts-ignore
-  const item = catalogue.find((i) => i.id === params.id);
+  const item = catalogueP.find((i) => i.id === params.id);
 
 
 

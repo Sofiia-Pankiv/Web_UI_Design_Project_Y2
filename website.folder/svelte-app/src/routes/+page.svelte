@@ -1,82 +1,125 @@
 <script>
- // @ts-nocheck
- import { catalogue } from '$lib/catalogue';
+    // @ts-nocheck
+    import { catalogue } from '$lib/catalogue';
     import { onMount } from 'svelte';
     import { Card } from '$lib';
     import { goto } from '$app/navigation';
-
-    let cards = catalogue; // Use full catalogue array
+   
     let selectedCategory = "";
-    
+   
     onMount(() => {
         console.log("Home Page Loaded");
     });
-
-    /** Function to navigate to the item's detail page
-	 * @param {string} id
-	 */
-     function viewItem(id) {
+   
+    function viewItem(id) {
         goto(`/${id}`);
     }
-</script>
-
-<img src="/artAd.png" alt="ART" class="header-image" />
-
-<div class="gallery">
-    {#each catalogue as card}
-        <!-- Wrap with <a> tag for navigation -->
-         {#if selectedCategory === "" || card.category.includes(selectedCategory)}
-            <button class="Card" on:click={() => viewItem(card.id)}>
-                <Card image={card.image} title={card.title} price={card.price} description={card.description} />
-            </button>
-        {/if}
-    {/each}
-</div>
-
-<style>
-  .header-image {
-    width: 1350px;
-    height: 250px;
-    display: block;
-    margin: 0 auto;
- }
-
-    /* Use Grid instead of Flexbox */
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-        gap: 20px;
-        justify-items: center;
-        margin-top: 2rem;
-        padding: 0 2rem;
+   
+    function toggleCategory(category) {
+        selectedCategory = selectedCategory === category ? "" : category;
     }
-
-    .gallery::after {
-        content: "";
-        grid-column: 1 / -1; /* Span the whole row */
-        width: 60%;
-        height: 3px;
-        background: linear-gradient(to right, rgb(49, 31, 5), transparent);
-        margin: 2rem auto 0 auto;
-    }
-    .Card{
-      width: 1px;
-      height: 1px;
-    }
-    button.Card {
-        all: unset;
-        cursor: pointer;
-        width: 100%;
-    }
-
-    :global(.card) {
-        border: 3px solid rgb(49, 31, 5);
-        border-radius: 18px;
-        transition: transform 0.3s ease;
-    }
-
-    :global(.card:hover) {
-        transform: scale(1.05);
-        z-index: 2;
-    }
-</style>
+   </script>
+   
+   <!-- FILTER BAR -->
+   <div class="filter-bar">
+       <button class:selected={selectedCategory === 'oil'} on:click={() => toggleCategory('oil')}>Oil</button>
+       <button class:selected={selectedCategory === 'acrylic'} on:click={() => toggleCategory('acrylic')}>Acrylic</button>
+       <button class:selected={selectedCategory === 'water-colour'} on:click={() => toggleCategory('water-colour')}>Watercolor</button>
+       <button class:selected={selectedCategory === 'digital'} on:click={() => toggleCategory('digital')}>Graphic</button>
+      
+   </div>
+   
+   <!-- HEADER IMAGE -->
+   <img src="/artAd.png" alt="ART" class="header-image" />
+   
+   <!-- GALLERY -->
+   <div class="gallery">
+       {#each catalogue as card}
+           {#if selectedCategory === "" || card.category.includes(selectedCategory)}
+               <button class="Card" on:click={() => viewItem(card.id)}>
+                   <Card image={card.image} title={card.title} price={card.price} description={card.description} />
+               </button>
+           {/if}
+       {/each}
+   </div>
+   
+   <style>
+   /* Filter Bar Styling */
+   .filter-bar {
+       background-color: #2c1907;
+       padding: 1rem 2rem;
+       display: flex;
+       justify-content: center;
+       gap: 1rem;
+       position: sticky;
+       top: 0;
+       z-index: 10;
+   }
+   
+   .filter-bar button {
+       background-color: white;
+       color: #2c1907;
+       border: 2px solid #2c1907;
+       padding: 0.5rem 1rem;
+       border-radius: 8px;
+       font-weight: bold;
+       transition: all 0.3s ease;
+       cursor: pointer;
+   }
+   
+   .filter-bar button:hover {
+       background-color: #2c1907;
+       color: white;
+   }
+   
+   .filter-bar button.selected {
+       background-color: #2c1907;
+       color: white;
+       box-shadow: 0 0 10px rgba(0,0,0,0.2);
+   }
+   
+   /* Header Image */
+   .header-image {
+       width: 1350px;
+       height: 250px;
+       display: block;
+       margin: 0 auto;
+   }
+   
+   /* Gallery Styling */
+   .gallery {
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       gap: 20px;
+       justify-items: center;
+       margin-top: 2rem;
+       padding: 0 2rem;
+   }
+   
+   .gallery::after {
+       content: "";
+       grid-column: 1 / -1;
+       width: 60%;
+       height: 3px;
+       background: linear-gradient(to right, rgb(49, 31, 5), transparent);
+       margin: 2rem auto 0 auto;
+   }
+   
+   button.Card {
+       all: unset;
+       cursor: pointer;
+       width: 100%;
+   }
+   
+   :global(.card) {
+       border: 3px solid rgb(49, 31, 5);
+       border-radius: 18px;
+       transition: transform 0.3s ease;
+   }
+   
+   :global(.card:hover) {
+       transform: scale(1.05);
+       z-index: 2;
+   }
+   </style>
+   

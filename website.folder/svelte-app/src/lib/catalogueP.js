@@ -1,5 +1,5 @@
   // Array of image paths with descriptions
- export let catalogue = [
+ export let catalogueP = [
   { id: '1', category: ["digital"], image: "/poster.jpg", title: "Poster", price: "$1450", description: "Inspirational ink painting" },
   { id: '2', category: ["water-colour"], image: "/lightHouse.jpg", title: "Light House", price: "$340", description: "Watercolor painting" },
   { id: '3', category: ["oil"], image: "/retro.jpg", title: "Closed! Frieder, do you realize what that means...", price: "$5000", description: "Moody and atmospheric acrylic painting" },
@@ -10,14 +10,9 @@
   { id: '8', category: ["digital"], image: "/silhouette.jpg", title: "Silhouette", price: "$150", description: "Graphic work of 'puzled' silhouette"},
   { id: '9', category: ["oil"], image: "/evening.jpg", title: "Summer Evening", price: "$545", description: "A beautiful painting of a view of an evening" },
   { id: '10', category: ["acrylic"], image: "/daisy.jpg", title: "Daisies", price: "$350", description: "View of Daisies" },
-  { id: '11', category: ["sculpture"], image: "/sunSculpt.jpg", title: "Sun", price: "$235", description: "Little statue of the Sun"},
-  { id: '12', category: ["acrylic"], image: "/smokingDuck.jpeg", title: "Duck", price: "$125", description: "Acrylic painting of the smoking duck" },
-  { id: '13', category: ["acrylic"], image: "/lily.jpg", title: "Lilies", price: "$500", description: "Flowers on the beige background" },
-  { id: '14', category: ["acrylic"], image: "/abstract.jpg", title: "Abstruct", price: "$750", description: "Abstract painting which suits every interier" },
-  { id: '15', category: ["illustration"], image: "/bull.jpg", title: "Bull", price: "$300", description: "Bull drawn in graphic technique" },
-  { id: '16', category: ["sculpture"], image: "/sculpture.jpg", title: "Sculpture", price: "$2 500", description: "Sculpture of a greek god" },
-  { id: '17', category: ["sculpture"], image: "/shawlGirl.jpg", title: "Shawl", price: "$9 500", description: "Sculpture of a woman under the shawl" },
-  { id: '18', category: ["sculpture"], image: "/diceHold.jpg", title: "Unrelating Luck", price: "$1 250", description: "Sculpture of a man holding a dice" },
-  { id: '19', category: ["sculpture"], image: "/hand.jpg", title: "Alte Ego", price: "$4 250", description: "The sculpture of an arm comming out of the mirrow" },
-  { id: '20', category: ["sculpture"], image: "/humster.jpg", title: "Humster", price: "$ 750", description: "Sculpture of a cute humster" }
+  { id: '11', category: ["acrylic"], image: "/smokingDuck.jpeg", title: "Duck", price: "$125", description: "Acrylic painting of the smoking duck" },
+  { id: '12', category: ["acrylic"], image: "/lily.jpg", title: "Lilies", price: "$500", description: "Flowers on the beige background" },
+  { id: '13', category: ["acrylic"], image: "/abstract.jpg", title: "Abstruct", price: "$750", description: "Abstract painting which suits every interier" },
+  { id: '14', category: ["illustration"], image: "/bull.jpg", title: "Bull", price: "$300", description: "Bull drawn in graphic technique" }
+  
 ];
