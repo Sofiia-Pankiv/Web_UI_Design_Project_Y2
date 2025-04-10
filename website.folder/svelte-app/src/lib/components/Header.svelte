@@ -137,7 +137,7 @@
         border: none;
         border-radius: 5px;
         font-size: 1rem;
-        width: 800px;
+        width: 650px;
         max-width: 60%;
     }
 

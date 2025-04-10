@@ -18,7 +18,7 @@
     function toggleCategory(category) {
         selectedCategory = selectedCategory === category ? "" : category;
     }
-   </script>
+</script>
    
    <!-- FILTER BAR -->
    <div class="filter-bar">
