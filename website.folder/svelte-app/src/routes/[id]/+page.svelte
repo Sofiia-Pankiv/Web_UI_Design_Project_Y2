@@ -83,7 +83,7 @@ img{
   }
 
   .product-image {
-      width: 45vw; /* Half of the screen width */
+      width: 45%; /* Half of the screen width */
       height: auto; /* Maintain aspect ratio */
       margin-right: 5vw;
       margin-left: -10vw; /* Move more to the left */

@@ -22,6 +22,10 @@
    
    <!-- FILTER BAR -->
    <div class="filter-bar">
+       <button class="category" class:selected={selectedCategory === 'painting'} on:click={() => toggleCategory('painting')}>Paintings</button>
+       <button class="category" class:selected={selectedCategory === 'sculpture'} on:click={() => toggleCategory('sculpture')}>Sculpture</button>
+       <button class="category" class:selected={selectedCategory === 'illustration'} on:click={() => toggleCategory('illustration')}>Illustrations</button>
+ 
        <button class:selected={selectedCategory === 'oil'} on:click={() => toggleCategory('oil')}>Oil</button>
        <button class:selected={selectedCategory === 'acrylic'} on:click={() => toggleCategory('acrylic')}>Acrylic</button>
        <button class:selected={selectedCategory === 'water-colour'} on:click={() => toggleCategory('water-colour')}>Watercolor</button>
@@ -42,18 +46,40 @@
            {/if}
        {/each}
    </div>
+
    
-   <style>
+   
+<style>
    /* Filter Bar Styling */
-   .filter-bar {
+.filter-bar {
+    background-color: #2c1907;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* ✅ Makes it responsive on smaller screens */
+    
+    position:static;
+    top: 100px; /* ✅ Adjust based on height of your header/navigation */
+    z-index: 10;
+    width: 100vw; /* ✅ Makes it span the full screen */
+    box-sizing: border-box; /* Ensure padding doesn't break layout */
+}
+
+.filter-bar .category {
        background-color: #2c1907;
-       padding: 1rem 2rem;
-       display: flex;
-       justify-content: center;
-       gap: 1rem;
-       position: sticky;
-       top: 0;
-       z-index: 10;
+       color: #ffffff;
+       border: 2px solid #ffffff;
+       padding: 0.5rem 1rem;
+       border-radius: 8px;
+       font-weight: bold;
+       transition: all 0.3s ease;
+       cursor: pointer;
+   }
+   .filter-bar .category:hover {
+       background-color: #ffffff;
+       color: #2c1907;
    }
    
    .filter-bar button {
@@ -69,11 +95,13 @@
    
    .filter-bar button:hover {
        background-color: #2c1907;
+       border: 2px solid #ffffff;
        color: white;
    }
    
    .filter-bar button.selected {
        background-color: #2c1907;
+       border: 2px solid #ffffff;
        color: white;
        box-shadow: 0 0 10px rgba(0,0,0,0.2);
    }
@@ -121,5 +149,5 @@
        transform: scale(1.05);
        z-index: 2;
    }
-   </style>
+</style>
    

@@ -2,7 +2,7 @@
     let isOpen = false;
     let showPaintingsMenu = false;
 
-    import { Navigation } from "$lib";
+    // import { Navigation } from "$lib";
     import { goto } from "$app/navigation";
 
     function goToProfile() {
@@ -52,9 +52,9 @@
 </header>
 
 <!-- Brown Navigation Bar -->
-<div class="brown-bar">
+<!-- <div class="brown-bar">
     <Navigation />
-</div>
+</div> -->
 
 <style>
     /* Header Layout */
@@ -164,14 +164,14 @@
     }
 
     /* Brown Bar */
-    .brown-bar {
+    /* .brown-bar {
         background-color: rgb(44, 25, 7);
         height: 100px;
         width: 100%;
         display: flex;
         align-items: center;
         padding-left: 1rem;
-    }
+    } */
 
     /* Mobile Styling */
     @media (max-width: 768px) {
@@ -199,9 +199,9 @@
             gap: 0.5rem;
         }
 
-        .brown-bar {
+        /* .brown-bar {
             justify-content: center;
             padding-left: 0;
-        }
+        } */
     }
 </style>
