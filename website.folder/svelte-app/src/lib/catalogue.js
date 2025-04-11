@@ -22,6 +22,6 @@
   { id: '20', category: ["painting"], image: "/cat.jpg", title: "Hey There!", price: "$250 ", description: "Painting of the cat which is looking at you from the canvas" },
   { id: '21', category: ["sculpture"], image: "/diceHold.jpg", title: "Unrelating Luck", price: "$1 250 ", description: "Sculpture of a man holding a dice" },
   { id: '22', category: ["sculpture"], image: "/hand.jpg", title: "Alte Ego", price: "$4 250 ", description: " The sculpture of an arm comming out of the mirrow" },
-  { id: '23', category: ["sculpture"], image: "/humster.jpg", title: "Hamster", price: "$750 ", description: " Sculpture of a cute humster" },
+  { id: '23', category: ["sculpture"], image: "/humster.jpg", title: "Hamster", price: "$750 ", description: " Sculpture of a cute hamster" },
   { id: '24', category: ["painting"], image: "/flowers.jpg", title: "White Flowers", price: "$675 ", description: " Picture of the white flowers in a vase" }
 ];

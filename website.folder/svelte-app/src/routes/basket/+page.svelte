@@ -80,6 +80,7 @@
 			</label>
 
 			<button type="submit">Confirm Order</button>
+			<p><br><br></p>
 		</form>
 	</div>
 </div>
