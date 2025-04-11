@@ -4,6 +4,7 @@
     import { onMount } from 'svelte';
     import { Card } from '$lib';
     import { goto } from '$app/navigation';
+    import { base } from "$app/paths";
    
     let selectedCategory = "";
    
@@ -12,7 +13,7 @@
     });
    
     function viewItem(id) {
-        goto(`/${id}`);
+        goto(`${base}/${id}`);
     }
    
     function toggleCategory(category) {
@@ -34,7 +35,7 @@
    </div>
    
    <!-- HEADER IMAGE -->
-   <img src="/artAd.png" alt="ART" class="header-image" />
+   <img src="{base}/artAd.png" alt="ART" class="header-image" />
    
    <!-- GALLERY -->
    <div class="gallery">

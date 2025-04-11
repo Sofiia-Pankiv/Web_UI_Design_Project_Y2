@@ -1,5 +1,8 @@
 <script>
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
+
+
 
     onMount(() => {
         console.log("About Page Loaded");
@@ -7,7 +10,7 @@
 </script>
 
 <section class="about-container">
-    <img src="/about-img.jpg" alt="About us" class="about-image">
+    <img src="{base}/about-img.jpg" alt="About us" class="about-image">
     <div class="about-text">
         <h1>About Us</h1>
         <p> LeArt is a unique platform dedicated to connecting artists and buyers who appreciate original artworks and handmade creations. Our mission is to support independent artists by providing a space where they can showcase and sell their work, while art lovers can discover and purchase truly one-of-a-kind pieces.

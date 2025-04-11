@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import { base } from "$app/paths";
 
 	onMount(() => {
 		console.log("Basket Page Loaded");
@@ -23,7 +24,7 @@
 		}
 
 		alert("Thank you for your order!");
-		goto('/'); // Redirect to homepage
+		goto(`${base}/`); // Redirect to homepage
 	}
 </script>
 
@@ -32,7 +33,7 @@
 
 	<!-- LEFT: Product Info -->
 	<div class="product-info">
-		<img src="/humster.jpg" alt="Product" class="product" />
+		<img src="{base}/humster.jpg" alt="Product" class="product" />
 		<h1>Hamster</h1>
 		<h3>Description:</h3>
 		<p>Sculpture of a cute hamster</p>

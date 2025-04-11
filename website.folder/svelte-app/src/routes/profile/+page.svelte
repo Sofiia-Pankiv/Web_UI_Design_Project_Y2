@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
 
     let user = {
         firstName: "",
@@ -50,7 +51,7 @@
     <!-- Форма регистрации -->
     <div class="container">
         <h1>Profile</h1>
-        <p>Get in touch via email at <a href="mailto:le.art@gmail.com">le.art@gmail.com</a></p>
+        <p>Get in touch via email at <a href="{base}mailto:le.art@gmail.com">le.art@gmail.com</a></p>
 
         <div class="content">
             <div class="buttons">

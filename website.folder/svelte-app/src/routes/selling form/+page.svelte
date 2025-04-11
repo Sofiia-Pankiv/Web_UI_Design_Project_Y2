@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import { page } from '$app/stores';
     import { get } from 'svelte/store';
+    import { base } from '$app/paths';
   
     let title = "Form for Selling";
     let imageSrc = "https://via.placeholder.com/150"; // Изображение по умолчанию

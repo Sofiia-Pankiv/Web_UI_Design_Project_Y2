@@ -4,15 +4,16 @@
 
     // import { Navigation } from "$lib";
     import { goto } from "$app/navigation";
+    import { base } from "$app/paths";
 
     function goToProfile() {
         console.log('Navigating to profile...');
-        goto("/profile");
+        goto(`${base}/profile`);
     }
 
     function goToBasket() {
         console.log('Navigating to basket...');
-        goto("/basket");
+        goto(`${base}/basket`);
     }
 </script>
 
@@ -20,17 +21,17 @@
     <!-- Logo + Navigation Container -->
     <div class="left-container">
         <div class="logo">
-            <img src="/Logo.png" alt="Website Logo">
+            <img src="{base}/Logo.png" alt="Website Logo">
             <h1>LeArt</h1>
         </div>
 
         <!-- Navigation Buttons -->
         <nav class="nav">
             <ul class:open={isOpen}>
-                <li><a href="/" class="special">Home</a></li>
-                <li><a href="/about" class="special">About</a></li>
-                <li><a href="/contact" class="special">Contact</a></li>
-                <li><a href="/selling form" class="special">Selling Form</a></li>
+                <li><a href="{base}/" class="special">Home</a></li>
+                <li><a href="{base}/about" class="special">About</a></li>
+                <li><a href="{base}/contact" class="special">Contact</a></li>
+                <li><a href="{base}/selling form" class="special">Selling Form</a></li>
             </ul>
         </nav>
     </div>
@@ -43,10 +44,10 @@
     <!-- Right Side Icons -->
     <div class="icons">
         <button class="profile-btn" on:click={goToProfile}>
-            <img src="/user.png" alt="Profile" class="profile-icon" />
+            <img src="{base}/user.png" alt="Profile" class="profile-icon" />
         </button>
         <button class="basket-btn" on:click={goToBasket}>
-            <img src="/cart.png" alt="Basket" class="basket-icon" />
+            <img src="{base}/cart.png" alt="Basket" class="basket-icon" />
         </button>
     </div>
 </header>
@@ -192,10 +193,6 @@
             height: 50px;
         }
 
-        /* Hamburger Menu (Mobile) */
-        .menu-btn {
-            display: block; /* Show hamburger button */
-        }
 
         /* Ensure Search Bar and Icons Stay Centered */
         .search-bar {

@@ -1,0 +1,29 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/about": [
+		"src/routes/+layout.js"
+	],
+	"/basket": [
+		"src/routes/+layout.js"
+	],
+	"/catalogue": [
+		"src/routes/+layout.js"
+	],
+	"/contact": [
+		"src/routes/+layout.js"
+	],
+	"/profile": [
+		"src/routes/+layout.js"
+	],
+	"/selling form": [
+		"src/routes/+layout.js"
+	],
+	"/[id]": [
+		"src/routes/[id]/+page.js",
+		"src/routes/[id]/+page.server.js",
+		"src/routes/+layout.js"
+	]
+}

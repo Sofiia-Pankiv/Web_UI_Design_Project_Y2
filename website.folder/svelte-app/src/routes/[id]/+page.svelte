@@ -3,6 +3,7 @@
     import { Card } from '$lib';
     // Bring in the navigation helper
     import { goto } from '$app/navigation';
+    import { base } from "$app/paths";
 
     // `data` is automatically provided by the load function from +page.js
     export let data;
@@ -18,7 +19,7 @@
 
 
 <!-- Back button -->
-<button class="back-button" on:click={() => goto('/')}>←</button>
+<button class="back-button" on:click={() => goto(`${base}/`)}>←</button>
 
 <div class="page-layout">
 <div class="container">
@@ -27,13 +28,13 @@
         <h1>{item.title}</h1>
         <p>{item.description}</p>
         <p>{item.price}</p>
-        <button class="basket-button" on:click={() => goto('/basket')}>Buy</button>
+        <button class="basket-button" on:click={() => goto(`${base}/basket`)}>Buy</button>
     </div>
 </div>
 
 <!-- Right side: Artist info -->
 <div class="artist-info">
-    <img src="artist.png" alt="Artist" class="artist-image" />
+    <img src="{base}artist.png" alt="Artist" class="artist-image" />
     <p>
         Lina Novak is a 22-year-old contemporary artist from Prague, Czech Republic. From a young age, she showed a deep passion for painting, often creating watercolor scenes inspired by her grandmother’s garden. At just 15, she held her first local exhibition in a neighborhood café, catching the attention of a regional art critic. Lina later studied Fine Arts at the Academy of Arts, Architecture and Design in Prague, where she developed her signature style blending impressionism with surreal elements.
         <br><br>
