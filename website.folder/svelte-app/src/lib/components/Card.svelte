@@ -91,4 +91,33 @@
     .card:hover .content h2::before {
         width: 80%; /* Expanded width on hover */
     }
+
+    /* Gallery Styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    gap: 20px;
+    justify-content: center;     /* ✅ Centers the grid horizontally */
+    justify-items: center;       /* ✅ Centers items inside each grid cell */
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+
+/* Center a single card per row on small screens */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;     /* ✅ One column layout */
+        padding: 0 1rem;
+    }
+
+    .Card {
+        display: flex;
+        justify-content: center;        /* ✅ Center button wrapper */
+        width: 100%;
+    }
+
+    :global(.card) {
+        margin: 0 auto;                 /* ✅ Center actual card */
+    }
+}
 </style>

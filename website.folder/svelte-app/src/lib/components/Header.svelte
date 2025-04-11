@@ -51,10 +51,6 @@
     </div>
 </header>
 
-<!-- Brown Navigation Bar -->
-<!-- <div class="brown-bar">
-    <Navigation />
-</div> -->
 
 <style>
     /* Header Layout */
@@ -163,45 +159,48 @@
         border-radius: 50%;
     }
 
-    /* Brown Bar */
-    /* .brown-bar {
-        background-color: rgb(44, 25, 7);
-        height: 100px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding-left: 1rem;
-    } */
 
-    /* Mobile Styling */
-    @media (max-width: 768px) {
-        header {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
+   /* Mobile Styling */
+   @media (max-width: 768px) {
+        /* Hide Logo Text on Mobile */
+        .logo h1 {
+            display: none; /* Hide logo text on mobile */
         }
 
-        .search-container {
-            width: 100%;
+        /* Make sure the logo is at the top */
+        .logo {
             justify-content: center;
+            margin-bottom: 1rem;
         }
 
+        /* Search Bar Full Width */
+        .search-container {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Profile and Basket Icons at Bottom */
+        .icons {
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        /* Mobile Flex Layout for Buttons */
+        .icons button {
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Hamburger Menu (Mobile) */
+        .menu-btn {
+            display: block; /* Show hamburger button */
+        }
+
+        /* Ensure Search Bar and Icons Stay Centered */
         .search-bar {
             width: 90%;
         }
-
-        .icons {
-            align-self: flex-end;
-        }
-
-        .nav ul {
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        /* .brown-bar {
-            justify-content: center;
-            padding-left: 0;
-        } */
+    
     }
 </style>

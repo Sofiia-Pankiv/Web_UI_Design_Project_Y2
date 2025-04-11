@@ -18,7 +18,7 @@
     function toggleCategory(category) {
         selectedCategory = selectedCategory === category ? "" : category;
     }
-</script>
+    </script>
    
    <!-- FILTER BAR -->
    <div class="filter-bar">
@@ -149,5 +149,48 @@
        transform: scale(1.05);
        z-index: 2;
    }
+
+     /* Mobile Styling */
+     @media (max-width: 768px) {
+        /* Hide Logo Text on Mobile */
+
+        .gallery {
+        grid-template-columns: 1fr; /* Change to 1 column on smaller screens */
+        padding: 0 1rem; /* Adjust padding on mobile */
+    }
+
+        .logo h1 {
+            display: none; /* Hide logo text */
+        }
+
+        /* Search Bar Full Width */
+        .search-container {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Profile and Basket Icons at Bottom */
+        .icons {
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        /* Mobile Flex Layout for Buttons */
+        .icons button {
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Hamburger Menu (Mobile) */
+        .menu-btn {
+            display: block; /* Show hamburger button */
+        }
+
+        /* Ensure Search Bar and Icons Stay Centered */
+        .search-bar {
+            width: 90%;
+        }
+    }
 </style>
    
