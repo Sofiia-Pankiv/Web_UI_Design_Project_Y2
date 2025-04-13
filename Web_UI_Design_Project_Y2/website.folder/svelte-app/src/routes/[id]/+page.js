@@ -1,12 +1,7 @@
 
 // @ts-ignore
 import { catalogue } from '$lib/catalogue.js';
-// import path helpers
 import { base } from '$app/paths';
-import { goto } from '$app/navigation';
-
-// navigate to our catalogue page
-goto(`${base}/catalogue`);
 
 /**
  * SvelteKit page load function.

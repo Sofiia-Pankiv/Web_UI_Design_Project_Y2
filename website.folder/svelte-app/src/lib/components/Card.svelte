@@ -4,6 +4,7 @@
     export let description = "This is a description";
     export let image; // Image prop
     export let price;
+    import { base } from '$app/paths';
 </script>
 
 <!-- Card container-->
@@ -97,8 +98,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
     gap: 20px;
-    justify-content: center;     /* ✅ Centers the grid horizontally */
-    justify-items: center;       /* ✅ Centers items inside each grid cell */
+    justify-content: center;     /* Centers the grid horizontally */
+    justify-items: center;       /* Centers items inside each grid cell */
     margin-top: 2rem;
     padding: 0 2rem;
 }
@@ -106,18 +107,18 @@
 /* Center a single card per row on small screens */
 @media (max-width: 768px) {
     .gallery {
-        grid-template-columns: 1fr;     /* ✅ One column layout */
+        grid-template-columns: 1fr;     /* One column layout */
         padding: 0 1rem;
     }
 
     .Card {
         display: flex;
-        justify-content: center;        /* ✅ Center button wrapper */
+        justify-content: center;        /* Center button wrapper */
         width: 100%;
     }
 
     :global(.card) {
-        margin: 0 auto;                 /* ✅ Center actual card */
+        margin: 0 auto;                 /* Center actual card */
     }
 }
 </style>

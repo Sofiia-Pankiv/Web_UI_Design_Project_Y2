@@ -59,12 +59,12 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap; /* ✅ Makes it responsive on smaller screens */
+    flex-wrap: wrap; /* Makes it responsive on smaller screens */
     
     position:static;
-    top: 100px; /* ✅ Adjust based on height of your header/navigation */
+    top: 100px; /* Adjust based on height of your header/navigation */
     z-index: 10;
-    width: 100vw; /* ✅ Makes it span the full screen */
+    width: 100vw; /* Makes it span the full screen */
     box-sizing: border-box; /* Ensure padding doesn't break layout */
 }
 

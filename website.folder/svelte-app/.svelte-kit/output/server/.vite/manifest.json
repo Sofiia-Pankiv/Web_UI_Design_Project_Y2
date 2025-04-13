@@ -9,13 +9,17 @@
       "_paths.js"
     ]
   },
-  "_Card.qlzAGbde.css": {
-    "file": "_app/immutable/assets/Card.qlzAGbde.css",
-    "src": "_Card.qlzAGbde.css"
+  "_Card.BSI3qT0O.css": {
+    "file": "_app/immutable/assets/Card.BSI3qT0O.css",
+    "src": "_Card.BSI3qT0O.css"
   },
   "_catalogue.js": {
     "file": "chunks/catalogue.js",
-    "name": "catalogue"
+    "name": "catalogue",
+    "imports": [
+      "_paths.js",
+      "_client.js"
+    ]
   },
   "_client.js": {
     "file": "chunks/client.js",
@@ -92,7 +96,7 @@
     ],
     "css": [
       "_app/immutable/assets/_layout.CnxGGTxO.css",
-      "_app/immutable/assets/Card.qlzAGbde.css"
+      "_app/immutable/assets/Card.BSI3qT0O.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -108,8 +112,8 @@
       "_equality.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.odvdAZua.css",
-      "_app/immutable/assets/Card.qlzAGbde.css"
+      "_app/immutable/assets/_page.DHCOsNMl.css",
+      "_app/immutable/assets/Card.BSI3qT0O.css"
     ]
   },
   "src/routes/[id]/+page.js": {
@@ -118,7 +122,8 @@
     "src": "src/routes/[id]/+page.js",
     "isEntry": true,
     "imports": [
-      "_catalogue.js"
+      "_catalogue.js",
+      "_client.js"
     ]
   },
   "src/routes/[id]/+page.server.js": {
@@ -139,7 +144,7 @@
     ],
     "css": [
       "_app/immutable/assets/_page.MY-TKNRa.css",
-      "_app/immutable/assets/Card.qlzAGbde.css"
+      "_app/immutable/assets/Card.BSI3qT0O.css"
     ]
   },
   "src/routes/about/+page.svelte": {

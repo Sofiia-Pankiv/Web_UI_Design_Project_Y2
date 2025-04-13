@@ -2,8 +2,13 @@
     import { onMount } from 'svelte';
     import { Card } from '$lib';
     // Bring in the navigation helper
-    import { goto } from '$app/navigation';
-    import { base } from "$app/paths";
+    // import path helpers
+import { base } from '$app/paths';
+import { goto } from '$app/navigation';
+
+// navigate to our catalogue page
+goto(`${base}/catalogue`);
+
 
     // `data` is automatically provided by the load function from +page.js
     export let data;
