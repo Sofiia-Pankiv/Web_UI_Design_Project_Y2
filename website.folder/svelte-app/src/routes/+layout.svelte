@@ -1,6 +1,7 @@
 <script>
     // Import components
     import { Header, Footer } from "$lib";
+    
 </script>
 
 <!-- Header -->

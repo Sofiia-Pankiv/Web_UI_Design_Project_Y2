@@ -39,7 +39,7 @@ goto(`${base}/catalogue`);
 
 <!-- Right side: Artist info -->
 <div class="artist-info">
-    <img src="{base}artist.png" alt="Artist" class="artist-image" />
+    <img src="{base}/artist.png" alt="Artist" class="artist-image" />
     <p>
         Lina Novak is a 22-year-old contemporary artist from Prague, Czech Republic. From a young age, she showed a deep passion for painting, often creating watercolor scenes inspired by her grandmother’s garden. At just 15, she held her first local exhibition in a neighborhood café, catching the attention of a regional art critic. Lina later studied Fine Arts at the Academy of Arts, Architecture and Design in Prague, where she developed her signature style blending impressionism with surreal elements.
         <br><br>

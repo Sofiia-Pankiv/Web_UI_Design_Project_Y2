@@ -207,8 +207,7 @@
     "src": "src/routes/profile/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
-      "_paths.js"
+      "_index.js"
     ],
     "css": [
       "_app/immutable/assets/_page.BUkBOGnj.css"
