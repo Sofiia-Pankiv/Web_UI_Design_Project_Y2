@@ -1,4 +1,4 @@
-let base = "/website-project";
+let base = "/ https://github.com/Sofiia-Pankiv/Web_UI_Design_Project_Y2";
 let assets = base;
 const app_dir = "_app";
 const initial = { base, assets };

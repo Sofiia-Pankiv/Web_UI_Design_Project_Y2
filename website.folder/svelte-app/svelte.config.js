@@ -1,17 +1,14 @@
 import adapter from '@sveltejs/adapter-static';
 
-// used to determine if we are using npm run dev
-const dev = process.env.NODE_ENV === 'development';
-const repoName = 'website-project'; // 👈 Replace with your repo name!
-
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {
-		adapter: adapter(),
-		paths: {
-			base: dev ? '' : `/${repoName}`
-		},
-	}
+export default {
+  kit: {
+    adapter: adapter({
+      pages: 'docs',
+      assets: 'docs',
+      fallback: null
+    }),
+    paths: {
+      base: process.env.NODE_ENV === 'production' ? '/ https://github.com/Sofiia-Pankiv/Web_UI_Design_Project_Y2' : ''
+    }
+  }
 };
-
-export default config;

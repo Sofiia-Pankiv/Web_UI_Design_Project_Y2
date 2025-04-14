@@ -6,11 +6,11 @@ function __memo(fn) {
 
 return {
 	appDir: "_app",
-	appPath: "website-project/_app",
+	appPath: " https://github.com/Sofiia-Pankiv/Web_UI_Design_Project_Y2/_app",
 	assets: new Set([".nojekyll","about-img.jpg","abstract.jpg","abstract1.jpg","apples.jpg","artAd.png","artist.png","bull.jpg","bull1.jpg","cart.png","cat.jpg","cats.jpeg","contact-img.jpg","contact.jpeg","contact2.jpeg","daisy.jpg","diceHold.jpg","dogCat.jpg","evening.jpg","favicon.png","flowers.jpg","hand.jpg","humster.jpg","lightHouse.jpg","lily.jpg","Logo.png","man.jpeg","olives.jpeg","placeholder.JPG","placeholder1.JPG","poster.jpg","retro.jpg","sadMan.jpg","sculpture.jpg","Sculpure.jpg","shawlGirl.jpg","silhouette.jpg","SLOVO.jpeg","smokingDuck.jpeg","styles/global.css","sunSculpt.jpg","user.png","venera.jpg","waterPortrait.jpg","womanSculpt.jpg"]),
 	mimeTypes: {".jpg":"image/jpeg",".png":"image/png",".jpeg":"image/jpeg",".JPG":"image/jpeg",".css":"text/css"},
 	_: {
-		client: null,
+		client: {start:"_app/immutable/entry/start.DytBeioy.js",app:"_app/immutable/entry/app.Cd7UcT-k.js",imports:["_app/immutable/entry/start.DytBeioy.js","_app/immutable/chunks/B74v-H4M.js","_app/immutable/chunks/UbVWcMcJ.js","_app/immutable/chunks/B9C4UwGy.js","_app/immutable/entry/app.Cd7UcT-k.js","_app/immutable/chunks/UbVWcMcJ.js","_app/immutable/chunks/BMD4F-Ca.js","_app/immutable/chunks/DYYR5rGb.js","_app/immutable/chunks/zPrH420j.js","_app/immutable/chunks/3p9zVWRu.js","_app/immutable/chunks/CM2grR79.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),

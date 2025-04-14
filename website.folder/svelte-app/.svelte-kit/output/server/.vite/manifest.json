@@ -17,8 +17,7 @@
     "file": "chunks/catalogue.js",
     "name": "catalogue",
     "imports": [
-      "_paths.js",
-      "_client.js"
+      "_paths.js"
     ]
   },
   "_client.js": {

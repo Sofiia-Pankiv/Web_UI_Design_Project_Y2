@@ -1,5 +1,4 @@
 import { b as base } from "./paths.js";
-import "./client.js";
 const catalogue = [
   { id: "1", category: ["illustration"], image: `${base}/poster.jpg`, title: "Poster", price: "$1450 ", description: "Inspirational ink painting" },
   { id: "2", category: ["water-colour"], image: `${base}/lightHouse.jpg`, title: "Light House", price: "$340 ", description: " Watercolor painting" },
