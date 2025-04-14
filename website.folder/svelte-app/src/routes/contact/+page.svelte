@@ -16,8 +16,8 @@
         <h1>Contact Us</h1>
         <aside class="contact-aside">
         <p>Email: <a href="mailto:support@leart.com">support@leart.com</a></p>
-        <p>Instagram: <a href="#aaa">@LeArtOfficial</a></p>
-        <p>Facebook: <a href="#aaaa">LeArt Community</a></p>
+        <p>Instagram: <a href="https://instagram.com/">@LeArtOfficial</a></p>
+        <p>Facebook: <a href="https://facebook.com">LeArt Community</a></p>
         </aside>
     <div class="contact-text">
         <p>Phone: +123 456 7890</p>

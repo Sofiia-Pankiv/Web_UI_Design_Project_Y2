@@ -1,7 +1,5 @@
 // import path helpers
 import { base } from '$app/paths';
-import { goto } from '$app/navigation';
-
 
   // Array of image paths with descriptions
 export const catalogue = [

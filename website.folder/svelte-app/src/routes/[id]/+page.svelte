@@ -6,9 +6,6 @@
 import { base } from '$app/paths';
 import { goto } from '$app/navigation';
 
-// navigate to our catalogue page
-goto(`${base}/catalogue`);
-
 
     // `data` is automatically provided by the load function from +page.js
     export let data;
